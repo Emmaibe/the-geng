@@ -1,3 +1,46 @@
+:root {
+  --clr-primary-100: #ffc43d;
+  --clr-primary-200: #874fff;
+  --clr-primary-300: #d12145;
+  --clr-pry-gradient-400: linear-gradient(
+    227.2deg,
+    #ffc43d 7.69%,
+    #d12145 100%
+  );
+
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-neutral-200: hsl(35, 74%, 95%);
+  --clr-neutral-300: #1a1c1a;
+  --clr-neutral-400: hsl(300, 100%, 0%);
+
+  --fs-100: 1rem;
+  --fs-200: 1.125rem;
+  --fs-300: 1.25rem;
+  --fs-400: 2.25rem;
+  --fs-500: 3rem;
+  --fs-600: 4rem;
+  --fs-700: 4.375rem;
+  --fs-800: 6.25rem;
+  --fs-900: 9.375rem;
+
+  --ff-long-summer: "Long Summer";
+}
+
+@font-face {
+  font-family: "Aeonik";
+  src: url("Aeonik/Aeonik-Regular.otf");
+}
+
+@font-face {
+  font-family: "Aeonik medium";
+  src: url("Aeonik/Aeonik-Medium.otf");
+}
+
+@font-face {
+  font-family: "Long Summer";
+  src: url("Long-summer/LongSummer.otf");
+}
+
 /* Box sizing rules */
 *,
 *::before,
@@ -11,10 +54,6 @@
   font: inherit;
   text-decoration: none;
   list-style-type: none;
-}
-
-a:hover {
-  border-bottom: 2px solid #8b8686;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
@@ -31,6 +70,7 @@ html:focus-within {
 html,
 body {
   height: 100%;
+  font-family: "Aeonik medium";
 }
 /* Set core body defaults */
 body {
@@ -81,8 +121,169 @@ svg {
   border: 0;
 }
 
+/* utility classes */
+
+.clr-primary-100 {
+  background-color: var(--clr-primary-100);
+}
+
+.clr-primary-200 {
+  background-color: var(--clr-primary-200);
+}
+
+.clr-primary-300 {
+  background-color: var(--clr-primary-300);
+}
+
+.clr-pry-gradient-400 {
+  background-image: var(--clr-pry-gradient-400);
+}
+
+.clr-neutral-100 {
+  color: var(--clr-neutral-100);
+}
+
+.clr-neutral-200 {
+  color: var(--clr-neutral-200);
+}
+
+.bg-clr-neutral-300 {
+  background-color: var(--clr-neutral-300);
+}
+
+.clr-neutral-400 {
+  color: var(--clr-neutral-400);
+}
+
+.fs-100 {
+  font-size: 1rem;
+}
+
+.fs-200 {
+  font-size: 1.125rem;
+}
+
+.fs-300 {
+  font-size: 1.25rem;
+}
+
+.fs-400 {
+  font-size: 2.25rem;
+}
+
+.fs-500 {
+  font-size: 3rem;
+}
+
+.fs-600 {
+  font-size: 4rem;
+}
+
+.fs-700 {
+  font-size: 4.375rem;
+}
+
+.fs-800 {
+  font-size: 6.25rem;
+}
+
+.fs-900 {
+  font-size: 9.375rem;
+}
+
+.flex-space-btw {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-space-evn {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.ff-long-summer {
+  font-family: var(--ff-long-summer);
+}
+
+.b-r-60 {
+  border-radius: 3.75rem;
+}
+
+.b-r-10 {
+  border-radius: 0.625rem;
+}
+
 /* general styling */
 
 body {
-  background-color: hsl(0, 0%, 92%);
+  background-color: var(--clr-neutral-200);
+  font-size: var(--fs-300);
+  padding: 2.5rem 0;
+}
+
+header,
+main,
+footer {
+  max-width: 1370px;
+  margin: auto;
+}
+
+nav {
+  width: 31.25rem;
+  border-radius: 3.75rem;
+}
+
+nav li {
+  padding: 1rem;
+}
+
+.event {
+  border-bottom: 3px solid var(--clr-neutral-400);
+}
+
+main {
+  margin-top: 4rem;
+}
+
+:where(main section:not(:first-child)) {
+  margin-top: 4rem;
+}
+
+.banner {
+  border-radius: 1.25rem;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner p {
+  text-align: center;
+  line-height: 1.3;
+}
+
+button {
+  background-color: #ffffff;
+  padding: 0.3rem 1rem;
+  box-shadow: 0.8rem 0.8rem var(--clr-neutral-300);
+}
+
+.heading {
+  padding-right: 0.7rem;
+}
+
+.activities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.3rem;
+  padding: 4rem;
+  border-radius: 1.25rem;
+  margin-top: 4rem;
+}
+
+.activities div {
+  border: 1px solid var(--clr-neutral-100);
+  padding: 0.7rem 1.9rem;
 }
