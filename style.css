@@ -2,6 +2,10 @@
   --clr-primary-100: #ffc43d;
   --clr-primary-200: #874fff;
   --clr-primary-300: #d12145;
+  --clr-primary-400: #96d6f0;
+  --clr-primary-500: #47e082;
+  --clr-primary-600: #b0a3ff;
+  --clr-primary-700: #d9d9d9;
   --clr-pry-gradient-400: linear-gradient(
     227.2deg,
     #ffc43d 7.69%,
@@ -25,6 +29,8 @@
   --fs-900: 9.375rem;
 
   --ff-long-summer: "Long Summer";
+
+  --ff-aeonik-thin: "Aeonik";
 }
 
 @font-face {
@@ -136,12 +142,32 @@ svg {
   background-color: var(--clr-primary-300);
 }
 
+.clr-primary-400 {
+  background-color: var(--clr-primary-400);
+}
+
+.clr-primary-500 {
+  background-color: var(--clr-primary-500);
+}
+
+.clr-primary-600 {
+  background-color: var(--clr-primary-600);
+}
+
+.clr-primary-700 {
+  background-color: var(--clr-primary-700);
+}
+
 .clr-pry-gradient-400 {
   background-image: var(--clr-pry-gradient-400);
 }
 
 .clr-neutral-100 {
   color: var(--clr-neutral-100);
+}
+
+.bg-clr-neutral-100 {
+  background-color: var(--clr-neutral-100);
 }
 
 .clr-neutral-200 {
@@ -196,6 +222,10 @@ svg {
   font-size: var(--fs-900);
 }
 
+.ff-aeonik-thin {
+  font-family: var(--ff-aeonik-thin);
+}
+
 .flex {
   display: flex;
   gap: 1rem;
@@ -229,6 +259,12 @@ svg {
 
 .grid-col {
   display: grid;
+  gap: 1rem;
+}
+
+.grid-col-2-1 {
+  display: grid;
+  grid-template-columns: 2.3fr 0.7fr;
   gap: 1rem;
 }
 
@@ -321,6 +357,7 @@ button {
   display: grid;
   grid-template-columns: 1fr 1fr;
   border-radius: 1.25rem;
+  grid-gap: 1rem;
   margin-top: 3rem;
 }
 
@@ -328,6 +365,7 @@ button {
   height: 18.375rem;
   padding: 2rem;
   border-radius: 0.625rem;
+  width: 100%;
 }
 
 .social-tag p {
@@ -336,6 +374,33 @@ button {
 
 .members {
   align-items: flex-end;
+}
+
+#geng-versary img {
+  margin: auto;
+}
+
+.tiny-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.tiny-images > div {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  position: relative;
+}
+
+.tiny-images div > img {
+  position: absolute;
+  bottom: 0;
+  right: 1px;
+  height: 2.8rem;
+  width: 2.8rem;
+  border-radius: 50%;
+  box-sizing: border-box;
 }
 
 .brands {
