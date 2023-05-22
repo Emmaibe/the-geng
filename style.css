@@ -229,6 +229,7 @@ svg {
 .flex {
   display: flex;
   gap: 1rem;
+  align-items: center;
 }
 
 .flex-space-btw {
@@ -247,7 +248,7 @@ svg {
 .flex-col {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .flex-column {
@@ -259,6 +260,7 @@ svg {
 
 .grid-col {
   display: grid;
+  grid-template-columns: 0.92fr 1.2fr;
   gap: 1rem;
 }
 
@@ -286,12 +288,14 @@ body {
   background-color: var(--clr-neutral-200);
   font-size: var(--fs-300);
   padding: 2.5rem 0;
+  overflow-x: hidden;
+  height: 100%;
 }
 
 header,
 main,
 footer {
-  max-width: 1370px;
+  max-width: 1300px;
   margin: auto;
 }
 
@@ -376,6 +380,15 @@ button {
   align-items: flex-end;
 }
 
+.members p {
+  line-height: 0.8;
+}
+
+.nigerian-flag {
+  max-width: 1.875rem;
+  max-height: 1.875rem;
+}
+
 #geng-versary img {
   margin: auto;
 }
@@ -412,6 +425,37 @@ button {
   padding: 5rem;
   border-radius: 1.25rem;
   margin-top: 3rem;
+}
+
+@keyframes scroll {
+  100% {
+    transform: translate3d(-200%, 0, 0);
+  }
+}
+
+.slide-cont {
+  display: flex;
+  overflow: hidden;
+}
+
+.carousel {
+  position: absolute;
+  padding: 0.5rem;
+  overflow: hidden;
+}
+
+.c-right {
+  transform: rotate(45deg);
+}
+
+.c-left {
+  transform: rotate(-45deg);
+}
+
+.slider {
+  display: flex;
+  gap: 1rem;
+  animation: scroll 150s linear infinite;
 }
 
 footer {
