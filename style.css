@@ -287,7 +287,7 @@ svg {
 body {
   background-color: var(--clr-neutral-200);
   font-size: var(--fs-300);
-  padding: 2.5rem 0;
+  padding-top: 2.5rem;
   overflow-x: hidden;
   height: 100%;
 }
@@ -427,15 +427,30 @@ button {
   margin-top: 3rem;
 }
 
-@keyframes scroll {
-  100% {
-    transform: translate3d(-200%, 0, 0);
-  }
+.slider-and-footer {
+  position: relative;
+  box-sizing: border-box;
+  max-height: 45rem;
+  padding-bottom: 4rem;
+  overflow: hidden;
 }
 
-.slide-cont {
-  display: flex;
-  overflow: hidden;
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(-200%);
+  }
+  75% {
+    transform: translateX(-300%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 .carousel {
@@ -445,11 +460,11 @@ button {
 }
 
 .c-right {
-  transform: rotate(45deg);
+  transform: rotate(30deg) translateY(67rem);
 }
 
 .c-left {
-  transform: rotate(-45deg);
+  transform: rotate(-30deg) translateY(2.8rem);
 }
 
 .slider {
@@ -466,6 +481,7 @@ footer {
   display: grid;
   grid-template-columns: 1fr 2fr;
   padding: 5rem;
+  padding-bottom: 10rem;
   border-radius: 1.25rem;
   margin-top: 4rem;
   align-items: flex-start;
