@@ -6,6 +6,7 @@
   --clr-primary-500: #47e082;
   --clr-primary-600: #b0a3ff;
   --clr-primary-700: #d9d9d9;
+  --clr-primary-800: #08e3e3;
   --clr-pry-gradient-400: linear-gradient(
     227.2deg,
     #ffc43d 7.69%,
@@ -156,6 +157,10 @@ svg {
 
 .clr-primary-700 {
   background-color: var(--clr-primary-700);
+}
+
+.clr-primary-800 {
+  background-color: var(--clr-primary-800);
 }
 
 .clr-pry-gradient-400 {
@@ -331,6 +336,26 @@ main {
 .banner p {
   text-align: center;
   line-height: 1.3;
+}
+
+.the-geng {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.profile {
+  max-width: 25.625rem;
+  max-height: 28.125rem;
+  border-radius: 0.625rem;
+}
+
+.profile-img {
+  box-sizing: border-box;
+}
+
+.profile-img img {
+  border-radius: 0.625rem;
 }
 
 button {
