@@ -30,8 +30,8 @@
   --fs-900: 9.375rem;
 
   --ff-long-summer: "Long Summer";
-
   --ff-aeonik-thin: "Aeonik";
+  --ff-rainbow-papper: "Rainbow Paper";
 }
 
 @font-face {
@@ -47,6 +47,11 @@
 @font-face {
   font-family: "Long Summer";
   src: url("Long-summer/LongSummer.otf");
+}
+
+@font-face {
+  font-family: "Rainbow Paper";
+  src: url("rainbow-paper/Rainbow\ Paper.otf");
 }
 
 /* Box sizing rules */
@@ -231,6 +236,10 @@ svg {
   font-family: var(--ff-aeonik-thin);
 }
 
+.ff-rainbow-paper {
+  font-family: var(--ff-rainbow-papper);
+}
+
 .flex {
   display: flex;
   gap: 1rem;
@@ -302,6 +311,7 @@ main,
 footer {
   max-width: 1300px;
   margin: auto;
+  padding: 0 1rem;
 }
 
 nav {
@@ -341,21 +351,101 @@ main {
 .the-geng {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 1.5rem;
+}
+
+@keyframes fadeIn {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn2 {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  100% {
+    display: block;
+    opacity: 0.5;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+
+.profile-container {
+  position: relative;
 }
 
 .profile {
   max-width: 25.625rem;
   max-height: 28.125rem;
   border-radius: 0.625rem;
+  background-color: hsl(0, 0%, 0%);
 }
 
 .profile-img {
   box-sizing: border-box;
+  border-radius: 0.625rem;
+}
+
+.profile:hover .profile-img {
+  opacity: 0.2;
+  animation: fadeOut 0.5s forwards;
 }
 
 .profile-img img {
   border-radius: 0.625rem;
+}
+
+.intro {
+  display: none;
+  position: absolute;
+  bottom: 5rem;
+  left: 1rem;
+  opacity: 1;
+}
+
+.intro p {
+  line-height: 1;
+}
+
+.profile-name {
+  margin-top: 0.5rem;
+  position: relative;
+}
+
+.tag-handle {
+  position: absolute;
+  top: 0;
+  opacity: 0.5;
+  display: none;
+}
+
+.profile-container:hover .tag-handle {
+  display: block;
+  animation: fadeIn2 0.5s forwards;
+}
+
+.profile-container:hover .name {
+  display: none;
+}
+
+.profile:hover .intro {
+  display: block;
+  animation: fadeIn 0.5s forwards;
 }
 
 button {
