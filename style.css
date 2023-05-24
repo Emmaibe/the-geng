@@ -572,10 +572,11 @@ button {
   position: absolute;
   padding: 0.5rem;
   overflow: hidden;
+  gap: 0.5rem;
 }
 
 .c-right {
-  transform: rotate(30deg) translateY(67rem);
+  transform: rotate(30deg) translateY(68.5rem);
 }
 
 .c-left {
@@ -584,8 +585,18 @@ button {
 
 .slider {
   display: flex;
-  gap: 1rem;
+  gap: 0.5rem;
+  align-items: center;
+  /* justify-content: center; */
   animation: scroll 150s linear infinite;
+}
+
+.slider > div {
+  display: flex;
+  justify-content: center;
+  width: 1rem;
+  margin: auto;
+  /* height: 2rem; */
 }
 
 footer {
