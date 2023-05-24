@@ -449,9 +449,48 @@ main {
 }
 
 button {
+  position: relative;
+  top: 1.8rem;
   background-color: #ffffff;
   padding: 0.3rem 1rem;
-  box-shadow: 0.8rem 0.8rem var(--clr-neutral-300);
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.btn {
+  max-width: fit-content;
+}
+
+.btn-shdw {
+  position: relative;
+  left: 0.8rem;
+  z-index: -1;
+  background-color: var(--clr-neutral-400);
+  padding: 0.3rem 1rem;
+}
+
+@keyframes btn-anime {
+  0% {
+    transform: translateX(0rem) translateY(0rem);
+  }
+
+  25% {
+    transform: translateX(0.8rem) translateY(0.8rem);
+  }
+
+  100% {
+    transform: translateX(0.8rem) translateY(0.8rem);
+  }
+
+  0% {
+    transform: translateX(0rem) translateY(0rem);
+  }
+}
+
+button[btn-focus] {
+  /* transform: translateX(0.8rem) translateY(0.8rem); */
+  animation: btn-anime 0.2s ease;
+  box-shadow: none;
 }
 
 .heading {
