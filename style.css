@@ -18,6 +18,7 @@
   --clr-neutral-300: #1a1c1a;
   --clr-neutral-400: hsl(300, 100%, 0%);
 
+  --fs-50: 0.875rem;
   --fs-100: 1rem;
   --fs-200: 1.125rem;
   --fs-300: 1.25rem;
@@ -192,6 +193,14 @@ svg {
   color: var(--clr-neutral-400);
 }
 
+.bg-clr-neutral-400 {
+  background-color: var(--clr-neutral-400);
+}
+
+.fs-50 {
+  font-size: var(--fs-50);
+}
+
 .fs-100 {
   font-size: var(--fs-100);
 }
@@ -294,6 +303,10 @@ svg {
 
 .b-r-10 {
   border-radius: 0.625rem;
+}
+
+.gap-half {
+  gap: 1.5rem;
 }
 
 /* general styling */
@@ -420,6 +433,30 @@ main {
 
 .intro p {
   line-height: 1;
+}
+
+.details-cont {
+  display: none;
+}
+
+.details {
+  position: absolute;
+  padding: 2rem 2.9rem 2rem 2rem;
+  gap: 2.5rem;
+  z-index: 100;
+  top: 0;
+  background-color: var(--clr-neutral-400);
+  height: 28.125rem;
+  border-radius: 0.625rem;
+}
+
+.details-cont[visible] {
+  display: block;
+}
+
+.profile-pic img {
+  box-sizing: border-box;
+  border-radius: 50%;
 }
 
 .profile-name {
