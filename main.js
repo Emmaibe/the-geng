@@ -1,7 +1,7 @@
 const button = document.querySelectorAll("button");
-const detail = document.querySelector(".details-cont");
-const profileImg = document.querySelector(".profile-img");
-const profile = document.querySelector(".profile");
+const details = document.querySelectorAll(".details-cont");
+const profileImg = document.querySelectorAll(".profile-img");
+const profile = document.querySelectorAll(".profile");
 
 button.forEach((btn) => {
   btn.addEventListener("click", () => {
@@ -13,7 +13,9 @@ button.forEach((btn) => {
   });
 });
 
-profile.addEventListener("click", () => {
-  detail.toggleAttribute("visible");
-  // profileImg.style.opacity = "0";
+profile.forEach((prof, index) => {
+  prof.addEventListener("click", () => {
+    const detail = details[index];
+    detail.toggleAttribute("visible");
+  });
 });
