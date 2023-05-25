@@ -349,16 +349,73 @@ main {
 }
 
 .banner {
+  display: grid;
+  gap: -1rem;
   border-radius: 1.25rem;
-  height: 80vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 100%;
+  /* padding: 1rem; */
+  box-sizing: border-box;
 }
 
 .banner p {
   text-align: center;
-  line-height: 1.3;
+  line-height: 1.1;
+}
+
+.banner-pics {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+}
+
+.first-line {
+  top: 2rem;
+}
+
+.last-line {
+  bottom: 0.5rem;
+}
+
+.eni-b {
+  position: relative;
+  left: 1.7rem;
+}
+
+.frances-b {
+  position: relative;
+  bottom: 6rem;
+}
+
+.beauty-b {
+  position: relative;
+  bottom: 1.5rem;
+  right: 2.5rem;
+}
+
+.susan-b {
+  position: relative;
+  left: 1.5rem;
+}
+
+.softmadeit-b {
+  position: relative;
+  left: 2.5rem;
+}
+
+.nimie-b {
+  position: relative;
+  left: 4.5rem;
+  bottom: 1.5rem;
+}
+
+.eronini-b {
+  position: relative;
+  bottom: 9.5rem;
+}
+
+.banner-pics > img {
+  position: relative;
 }
 
 .the-geng {
