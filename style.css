@@ -612,12 +612,12 @@ button[btn-focus] {
 .activities div {
   border: 1px solid var(--clr-neutral-100);
   padding: 0.7rem 1.9rem;
-  transition: background-color 0.2s, border 0.2s;
+  transition: background-color 0.2s, border-color 0.2s;
   cursor: pointer;
 }
 
 .activities div:hover {
-  border: none;
+  border-color: var(--clr-primary-300);
   background-color: var(--clr-primary-300);
 }
 
